@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Texto</title>
+    <style>
+        h1{
+            margin-bottom: 40px;
+        }
+        body{
+            text-align: center;
+        }
+        p{
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+        input{
+            width:80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mensagens de acordo com a CAIXA DE TEXTO</h1>
+    <label for="numero"><strong>Numero:</strong> <input type="number" id="input1"></label>
+    <button id="btn">Clique Aqui</button>
+    <p>Mensagem a ser exibida</p>
+
+    <script>
+        var a=document.getElementById('btn')
+        a.addEventListener('click',clicar)
+        function clicar(){
+            var b=Number(document.getElementById('input1').value)
+            document.getElementsByTagName('p')[0].innerHTML=''
+            for (i=1;i<b;i++)
+                document.getElementsByTagName('p')[0].innerHTML=document.getElementsByTagName('p')[0].innerHTML+' <strong>AIA '+i+',</strong>'
+            document.getElementsByTagName('p')[0].innerHTML=document.getElementsByTagName('p')[0].innerHTML+' <strong>AIA '+i+'.</strong>'
+        }
+    </script>
+</body>
+</html>

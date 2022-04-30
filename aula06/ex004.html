@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome=window.prompt("Qual é o seu nome?")
+        document.writeln(`Seu nome tem ${nome.length} caracteres. <br>`) // Quebra de linha complementada com <br>, writeln apenas insere espaco e nao pula linha
+        document.writeln(` teste <br>`)
+        document.write(`Seu nome tem <strong> ${nome.split(" ").join("").length} </strong>letras (sem contar os espaços).<br>`) // retirando os espacos da string
+        document.write(`Seu nome em maiusculas é <em>${nome.toUpperCase()}</em><br>`)
+        document.write("teste")
+    </script>
+</body>
+</html>

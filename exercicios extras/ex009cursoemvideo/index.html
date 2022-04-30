@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&family=Rubik+Wet+Paint&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            text-align: center;
+        }
+        h1{
+            font-family: 'Rubik Puddles', cursive;
+            color:black;
+            font-size: 40px;
+        }
+        button{
+            margin-top: 20px;
+            height: 70px;
+            width: 150px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        p{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <button id="btn1" onclick="click1()">Clique em mim</button>
+    <button id="btn2" onclick="click2()">Zerar o contador</button>
+    <p>O contador está com <mark>0</mark> cliques.</p>
+
+    <script>
+        n=1
+        function click1(){
+            document.getElementsByTagName('p')[0].innerHTML=`O contador está com <mark>${n}</mark> cliques.`
+            n++
+        }
+        function click2(){
+            document.getElementsByTagName('p')[0].innerHTML=null
+            n=1
+        }
+    </script>
+</body>
+</html>

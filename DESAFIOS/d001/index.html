@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        button{
+            padding: 25px;
+            background-color: lemonchiffon;
+        }
+        body{
+            background-image: linear-gradient(to right,grey,darkgrey,lightgrey,white);
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das Mensagens</h1>
+    <button id="btn1" onclick="click1()">Botão 1</button>
+    <button id="btn2" onclick="click2()">Botão 2</button>
+    <button id="btn3" onclick="click3()">Botão 3</button>
+
+    <script>
+        function click1(){
+            window.alert('Você clicou no 1º Botão!')
+            if (document.getElementById('btn1').style.background=='red')
+                document.getElementById('btn1').style.background='lemonchiffon'
+            else
+                document.getElementById('btn1').style.background='red'
+        }
+        function click2(){
+            window.alert("Você clicou no 2º Botão!")
+            if (document.getElementById('btn2').style.background=='red')
+                document.getElementById('btn2').style.background='lemonchiffon'
+            else
+                document.getElementById('btn2').style.background='red'
+        }
+        function click3(){
+            window.alert(`Você clicou no 3º Botão!`)
+            if (document.getElementById('btn3').style.background=='red')
+                document.getElementById('btn3').style.background='lemonchiffon'
+            else
+                document.getElementById('btn3').style.background='red'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style>
+        button{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            border-width: 2px;
+            font-size: 100px;
+        }
+        div{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 3em;
+            background-color: cadetblue;
+            color:white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-style: dashed;
+            border-color: yellow;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seja bem vindo ao jogo da velha, Boa Sorte!</h1>
+    <div id="btn1x1" onclick="click1()">...</div> <div id="btn1x2" onclick="click()">...</div> <div id="btn1x3" onclick="click()">...</div> <br>
+    <div id="btn2x1" onclick="click()">...</div> <div id="btn2x2" onclick="click()">...</div> <div id="btn2x3" onclick="click()">... </div> <br>
+    <div id="btn3x1" onclick="click()">...</div> <div id="btn3x2" onclick="click()">...</div> <div id="btn3x3" onclick="click()">... </div> 
+
+    <script>
+        var jogada='X'
+        function click1(){
+            document.getElementById("btn1x1").innerText=jogada
+            if (jogada=='X')
+                jogada='O'
+            else
+                jogada='X'
+        }
+    </script>
+</body>
+</html>

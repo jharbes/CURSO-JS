@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <style>
+        @font-face {
+            font-family: 'PressStart2P';
+            src: url(fonts/PressStart2P-Regular.ttf) format('truetype');
+        }
+        body{
+            background-image: linear-gradient(to right,grey,darkgrey,lightgrey,white);
+            text-align: center;
+        }
+        p{
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+        }
+        button{
+            height: 50px;
+            width: 200px;
+            background-color: cornflowerblue;
+            margin-bottom: 15px;
+        }
+        h1{
+            font-family: 'PressStart2P',monospace;
+            margin-bottom: 40px;
+        }
+        button:hover{
+            background-color: darkgoldenrod;
+        }
+        #p1{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <button><strong>Reajustar Salário</strong></button>
+    <p>Clique no botão acima para iniciar.</p>
+    <p id="p1"></p>
+
+    <script>
+        var a=document.getElementsByTagName('button')[0]
+        a.addEventListener('click',clicou)
+        function clicou(){
+            var nome=window.prompt("Qual é o nome do funcionário?")
+            var salario=Number(window.prompt("Qual é o salário de "+nome+"?"))
+            var reajuste=Number(window.prompt("O salário de "+nome+" vai ser reajustado em qual porcentagem?"))
+            document.getElementsByTagName('p')[0].innerHTML=`${nome} recebeu um aumento salarial!`
+            document.getElementsByTagName('p')[0].style.fontWeight='bold'
+            document.getElementsByTagName('p')[0].style.fontSize='25px'
+            document.getElementsByTagName('p')[1].innerHTML=`O salário atual era de ${salario.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}.<br>`
+            document.getElementsByTagName('p')[1].innerHTML+=`Com um aumento de ${reajuste}%, o salário vai aumentar em ${(salario*reajuste*0.01).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} no próximo mês.<br>`
+            document.getElementsByTagName('p')[1].innerHTML+=`E a partir daí, ${nome} vai passar a ganhar ${(salario+salario*reajuste*0.01).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}.`
+        }
+    </script>
+</body>
+</html>

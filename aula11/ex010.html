@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        #txtvel{
+            width:70px;
+        }
+        #btnvel{
+            font-weight: bold;
+            margin:10px;
+        }
+        #btnvel:hover{
+            background-color: darkseagreen;
+        }
+        div{
+            width: 400px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="txtvel">Velocidade do carro: <input type="number" id="txtvel">Km/h</label>
+    <input type="button" name="btnvel" id="btnvel" value="Verificar" onclick="calcular()">
+    <div></div>
+    <script>
+        function calcular(){
+            var a=Number(document.getElementById('txtvel').value)
+            if (a>60){
+                document.getElementsByTagName('div')[0].innerHTML=`<strong>Velocidade de ${a}km/h acima da permitida! Veículo Multado!</strong>`
+                document.getElementsByTagName('div')[0].style.backgroundColor='red'
+            }else{
+                document.getElementsByTagName('div')[0].innerHTML=`<strong>Velocidade dentro do permitido.</strong>`
+                document.getElementsByTagName('div')[0].style.backgroundColor='lightgreen'
+            }
+        }
+    </script>
+</body>
+</html>

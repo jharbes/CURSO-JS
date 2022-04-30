@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de número aleatório</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #btn{
+            margin-top: 50px;
+            height: 200px;
+            width: 200px;
+            background-image: linear-gradient(to right,lightblue,white);
+            text-align: center;
+            font-size: 50px;
+        }
+        h1{
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique no botão para gerar um número aleatório entre 0 e 50.</h1>
+    <button id="btn">Clique aqui</button>
+
+    <script>
+        var a=document.getElementById('btn')
+        a.addEventListener('click',clicou)
+
+        function clicou(){
+            a.innerText=Math.floor(Math.random() * 50 + 0)
+        }
+    </script>
+</body>
+</html>

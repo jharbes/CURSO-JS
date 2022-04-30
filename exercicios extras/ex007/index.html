@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando números</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            margin-top: 30px;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        button{
+            height: 40px;
+        }
+        input{
+            height:40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite um número para ver se ele é bom ou não</h1>
+    <label for="numero">Numero: <input type="number" id="input1"></label>
+    <button id="btn" onclick="clicou()">Clique aqui para ter o resultado!</button><br>
+    <div id="div1">Aqui vai o resultado!</div>
+
+    <script>
+        function clicou(){
+            var a=Number(document.getElementById('input1').value)
+            console.log(a)
+            if (a<=10)
+                document.getElementById('div1').innerHTML='<strong>Insuficiente</strong>'
+            else if (a<=14)
+                document.getElementById('div1').innerHTML='<strong>Bom</strong>'
+            else
+                document.getElementById('div1').innerHTML='<strong>Muito Bom</strong>'
+        }
+    </script>
+</body>
+</html>

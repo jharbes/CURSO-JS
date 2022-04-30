@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvendo Equações do 2º Grau</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+        body{
+            background-image: linear-gradient(to right,rgb(111, 111, 184),rgb(147, 147, 189),rgb(151, 178, 187),white);
+            text-align: center;
+        }
+        input{
+            width: 60px;
+            height:20px;
+        }
+        p{
+            font-size: 20px;
+            margin-top: 50px;
+        }
+        button{
+            height:50px;
+            width: 150px;
+            margin-top: 50px;
+            font-weight: bolder;
+        }
+        h1{
+            font-family: 'Goldman', cursive;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Equações do 2º Grau com Raízes Reais</h1>
+    <button>Calcular</button>
+    <p>Considerando uma equação no formato <input type="number" id="input1">x<sup>2</sup> + <input type="number" id="input2">x + <input type="number" id="input3"> = 0, preencha e aperte o botão para calcular o &#916 e suas raízes reais.</p>
+    <p></p>
+
+    <script>
+        var btn=document.getElementsByTagName('button')[0]
+        btn.addEventListener('click',clicou)
+        function clicou(){
+            var a=Number(document.getElementById('input1').value)
+            console.log(a)
+            var b=Number(document.getElementById('input2').value)
+            var c=Number(document.getElementById('input3').value)
+            var delta=b*b-4*a*c
+            if (delta<0){
+                var x1=`${-b/2*a} + ${Math.sqrt(-delta)/2*a} i`
+                var x2=`${-b/2*a} - ${Math.sqrt(-delta)/2*a} i`
+                document.getElementsByTagName('p')[0].innerHTML=`<strong>Resolvendo equações do 2º Grau</strong>`
+                document.getElementsByTagName('p')[0].style.fontSize='40px'
+                document.getElementsByTagName('p')[1].innerHTML=`A equação atual é <strong>${a}x<sup>2</sup> + ${b}x + ${c} = 0</strong><br>`
+                document.getElementsByTagName('p')[1].innerHTML+=`O cálculo realizado será <strong>&#916 = ${b}<sup>2</sup> - 4 . ${a} . ${c}</strong><br>`
+                document.getElementsByTagName('p')[1].innerHTML+=`O valor calculado foi <mark><strong>&#916 = ${delta}</strong></mark><br>`
+                document.getElementsByTagName('p')[1].innerHTML+=`Suas raízes imaginárias são <mark><strong>x<sub>1</sub> = ${x1} e x<sub>2</sub> = ${x2}</strong></mark>`
+            }
+            else{
+                var x1=(-b+Math.sqrt(delta))/2*a
+                var x2=(-b-Math.sqrt(delta))/2*a
+                document.getElementsByTagName('p')[0].innerHTML=`<strong>Resolvendo equações do 2º Grau</strong>`
+                document.getElementsByTagName('p')[0].style.fontSize='40px'
+                document.getElementsByTagName('p')[1].innerHTML=`A equação atual é <strong>${a}x<sup>2</sup> + ${b}x + ${c} = 0</strong><br>`
+                document.getElementsByTagName('p')[1].innerHTML+=`O cálculo realizado será <strong>&#916 = ${b}<sup>2</sup> - 4 . ${a} . ${c}</strong><br>`
+                document.getElementsByTagName('p')[1].innerHTML+=`O valor calculado foi <mark><strong>&#916 = ${delta}</strong></mark><br>`
+                document.getElementsByTagName('p')[1].innerHTML+=`Suas raízes reais são <mark><strong>x<sub>1</sub> = ${x1} e x<sub>2</sub> = ${x2}</strong></mark>`
+            }
+        }
+    </script>
+</body>
+</html>

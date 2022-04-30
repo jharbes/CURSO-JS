@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        button{
+            height: 50px;
+            width: 110px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button><strong>Converter</strong></button>
+    <p id="p1">Clique no botão acima para iniciar.</p>
+    <p id="p2"></p>
+
+    <script>
+        var a=document.querySelector("button")
+        a.addEventListener('click',clicou)
+        function clicou(){
+            n=Number(window.prompt('Digite uma distância em metros (m)'))
+            document.querySelector('#p1').innerHTML=`<strong>A distância de ${n.toLocaleString('pt-BR')} metros, corresponde a...</strong><br>`
+            document.querySelector('#p1').style.fontSize='20px'
+            document.querySelector('#p2').innerHTML+=`${(n*(0.001)).toLocaleString('pt-BR')} quilômetros (Km)<br>`
+            document.querySelector('#p2').innerHTML+=`${(n*(0.01)).toLocaleString('pt-BR')} hectômetros (Hm)<br>`
+            document.querySelector('#p2').innerHTML+=`${(n*(0.1)).toLocaleString('pt-BR')} decâmetros (Dam)<br>`
+            document.querySelector('#p2').innerHTML+=`${(n*(10)).toLocaleString('pt-BR')} decímetros (dm)<br>`
+            document.querySelector('#p2').innerHTML+=`${(n*(100)).toLocaleString('pt-BR')} centímetros (cm)<br>`
+            document.querySelector('#p2').innerHTML+=`${(n*(1000)).toLocaleString('pt-BR')} milímetros (Km)<br>`
+        }
+    </script>
+</body>
+</html>
