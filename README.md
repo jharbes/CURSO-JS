@@ -1,4 +1,4 @@
-<img src="kisspng-javascript-logo-html-clip-art-javascript-logo-5b5188b1a2a1f9.2428698915320700656662.png" align="right" width="200">
+<img src="kisspng-javascript-logo-html-clip-art-javascript-logo-5b5188b1a2a1f9.2428698915320700656662.png" align="right" width="150">
 
 # CURSO-JS
 
